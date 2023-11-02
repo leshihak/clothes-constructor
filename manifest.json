@@ -1,0 +1,17 @@
+{
+  "name": "Imran Codes",
+  "short_name": "Imran",
+  "theme_color": "#fff",
+  "background_color": "#000",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://imrancodes.com/",
+  "description": "The ultimate destination for anyone looking to learn how to code and become a web development expert!",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://imrancodes.com/imran.jpg",
+      "sizes": "1024x1024"
+    }
+  ]
+}
