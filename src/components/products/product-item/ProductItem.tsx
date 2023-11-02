@@ -15,7 +15,11 @@ import TShirtShortSleevesLinen from "../../images/short-sleeves/t-shirt-short-sl
 import TShirtShortSleevesSilk from "../../images/short-sleeves/t-shirt-short-sleeves-silk.png";
 import TShirtShortSleevesVelvet from "../../images/short-sleeves/t-shirt-short-sleeves-velvet.png";
 
-import { ALL_ORNAMENTS, ORNAMENTS_ENUM } from "./constants";
+import {
+  LONG_ALL_ORNAMENTS,
+  ORNAMENTS_ENUM,
+  SHORT_ALL_ORNAMENTS,
+} from "./constants";
 
 const ProductItem = () => {
   const { productId } = useParams();
@@ -80,18 +84,37 @@ const ProductItem = () => {
           style={{ maxWidth: 500 }}
         />
 
-        {ALL_ORNAMENTS[ornamentType!]?.map(({ imageSrc, imageAlt, styles }) => (
-          <img
-            key={imageAlt}
-            src={imageSrc}
-            alt={imageAlt}
-            style={{
-              maxWidth: 50,
-              position: "absolute",
-              ...styles,
-            }}
-          />
-        ))}
+        {selectedProduct?.type === "t-shirt-long-sleeves" &&
+          LONG_ALL_ORNAMENTS[ornamentType!]?.map(
+            ({ imageSrc, imageAlt, styles }) => (
+              <img
+                key={imageAlt}
+                src={imageSrc}
+                alt={imageAlt}
+                style={{
+                  maxWidth: 50,
+                  position: "absolute",
+                  ...styles,
+                }}
+              />
+            )
+          )}
+
+        {selectedProduct?.type === "t-shirt-short-sleeves" &&
+          SHORT_ALL_ORNAMENTS[ornamentType!]?.map(
+            ({ imageSrc, imageAlt, styles }) => (
+              <img
+                key={imageAlt}
+                src={imageSrc}
+                alt={imageAlt}
+                style={{
+                  maxWidth: 50,
+                  position: "absolute",
+                  ...styles,
+                }}
+              />
+            )
+          )}
       </Box>
 
       <SettingsColumn

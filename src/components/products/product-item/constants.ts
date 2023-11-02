@@ -6,8 +6,9 @@ import GeometricOrnament1 from "../../images/geometric-ornament/geometric-orname
 import GeometricOrnament2 from "../../images/geometric-ornament/geometric-ornament-2.png";
 import GeometricOrnament3 from "../../images/geometric-ornament/geometric-ornament-3.png";
 
+// LONG SLEEVES
 // FLORAL ORNAMENTS
-export const FLORAL_ORNAMENT_1 = [
+export const LONG_FLORAL_ORNAMENT_1 = [
   {
     imageSrc: FloralOrnament1,
     imageAlt: "floral-ornament-1-left",
@@ -54,7 +55,7 @@ export const FLORAL_ORNAMENT_1 = [
   },
 ];
 
-export const FLORAL_ORNAMENT_2 = [
+export const LONG_FLORAL_ORNAMENT_2 = [
   {
     imageSrc: FloralOrnament2,
     imageAlt: "floral-ornament-2-left",
@@ -101,7 +102,7 @@ export const FLORAL_ORNAMENT_2 = [
   },
 ];
 
-export const FLORAL_ORNAMENT_3 = [
+export const LONG_FLORAL_ORNAMENT_3 = [
   {
     imageSrc: FloralOrnament3,
     imageAlt: "floral-ornament-3-left",
@@ -149,7 +150,7 @@ export const FLORAL_ORNAMENT_3 = [
 ];
 
 // GEOMETRIC ORNAMENTS
-export const GEOMETRIC_ORNAMENT_1 = [
+export const LONG_GEOMETRIC_ORNAMENT_1 = [
   {
     imageSrc: GeometricOrnament1,
     imageAlt: "geometric-ornament-1-left",
@@ -196,7 +197,7 @@ export const GEOMETRIC_ORNAMENT_1 = [
   },
 ];
 
-export const GEOMETRIC_ORNAMENT_2 = [
+export const LONG_GEOMETRIC_ORNAMENT_2 = [
   {
     imageSrc: GeometricOrnament2,
     imageAlt: "geometric-ornament-2-left",
@@ -243,7 +244,7 @@ export const GEOMETRIC_ORNAMENT_2 = [
   },
 ];
 
-export const GEOMETRIC_ORNAMENT_3 = [
+export const LONG_GEOMETRIC_ORNAMENT_3 = [
   {
     imageSrc: GeometricOrnament3,
     imageAlt: "geometric-ornament-3-left",
@@ -290,17 +291,324 @@ export const GEOMETRIC_ORNAMENT_3 = [
   },
 ];
 
-// ALL ORNAMENTS
-export const ALL_ORNAMENTS = {
-  FLORAL_ORNAMENT_1: FLORAL_ORNAMENT_1,
-  FLORAL_ORNAMENT_2: FLORAL_ORNAMENT_2,
-  FLORAL_ORNAMENT_3: FLORAL_ORNAMENT_3,
+export const LONG_ALL_ORNAMENTS = {
+  FLORAL_ORNAMENT_1: LONG_FLORAL_ORNAMENT_1,
+  FLORAL_ORNAMENT_2: LONG_FLORAL_ORNAMENT_2,
+  FLORAL_ORNAMENT_3: LONG_FLORAL_ORNAMENT_3,
 
-  GEOMETRIC_ORNAMENT_1: GEOMETRIC_ORNAMENT_1,
-  GEOMETRIC_ORNAMENT_2: GEOMETRIC_ORNAMENT_2,
-  GEOMETRIC_ORNAMENT_3: GEOMETRIC_ORNAMENT_3,
+  GEOMETRIC_ORNAMENT_1: LONG_GEOMETRIC_ORNAMENT_1,
+  GEOMETRIC_ORNAMENT_2: LONG_GEOMETRIC_ORNAMENT_2,
+  GEOMETRIC_ORNAMENT_3: LONG_GEOMETRIC_ORNAMENT_3,
 };
 
+// SHORT SLEEVES
+// FLORAL ORNAMENTS
+export const SHORT_FLORAL_ORNAMENT_1 = [
+  {
+    imageSrc: FloralOrnament1,
+    imageAlt: "floral-ornament-1-left",
+    styles: {
+      maxWidth: 95,
+      left: 38,
+      top: 156,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(49deg)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament1,
+    imageAlt: "floral-ornament-1-right",
+    styles: {
+      maxWidth: 95,
+      left: "unset",
+      top: 176,
+      right: 38,
+      bottom: "unset",
+      transform: "rotate(317deg) scaleX(-1)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament1,
+    imageAlt: "floral-ornament-1-top-left",
+    styles: {
+      left: 205,
+      top: 56,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(34deg)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament1,
+    imageAlt: "floral-ornament-1-top-right",
+    styles: {
+      left: "unset",
+      top: 56,
+      right: 205,
+      bottom: "unset",
+      transform: "rotate(-37deg) scaleX(-1)",
+    },
+  },
+];
+
+export const SHORT_FLORAL_ORNAMENT_2 = [
+  {
+    imageSrc: FloralOrnament2,
+    imageAlt: "floral-ornament-2-left",
+    styles: {
+      maxWidth: 95,
+      left: 26,
+      top: 184,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(49deg)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament2,
+    imageAlt: "floral-ornament-2-right",
+    styles: {
+      maxWidth: 95,
+      left: "unset",
+      top: 197,
+      right: 27,
+      bottom: "unset",
+      transform: "rotate(317deg) scaleX(-1)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament2,
+    imageAlt: "floral-ornament-2-top-left",
+    styles: {
+      left: 205,
+      top: 56,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(34deg)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament2,
+    imageAlt: "floral-ornament-2-top-right",
+    styles: {
+      left: "unset",
+      top: 56,
+      right: 205,
+      bottom: "unset",
+      transform: "rotate(-37deg) scaleX(-1)",
+    },
+  },
+];
+
+export const SHORT_FLORAL_ORNAMENT_3 = [
+  {
+    imageSrc: FloralOrnament3,
+    imageAlt: "floral-ornament-3-left",
+    styles: {
+      maxWidth: 95,
+      left: 38,
+      top: 156,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(49deg)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament3,
+    imageAlt: "floral-ornament-3-right",
+    styles: {
+      maxWidth: 95,
+      left: "unset",
+      top: 176,
+      right: 38,
+      bottom: "unset",
+      transform: "rotate(317deg) scaleX(-1)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament3,
+    imageAlt: "floral-ornament-3-top-left",
+    styles: {
+      left: 205,
+      top: 56,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(34deg)",
+    },
+  },
+  {
+    imageSrc: FloralOrnament3,
+    imageAlt: "floral-ornament-3-top-right",
+    styles: {
+      left: "unset",
+      top: 56,
+      right: 205,
+      bottom: "unset",
+      transform: "rotate(-37deg) scaleX(-1)",
+    },
+  },
+];
+
+// GEOMETRIC ORNAMENTS
+export const SHORT_GEOMETRIC_ORNAMENT_1 = [
+  {
+    imageSrc: GeometricOrnament1,
+    imageAlt: "geometric-ornament-1-left",
+    styles: {
+      maxWidth: 95,
+      left: 27,
+      top: 181,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(49deg)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament1,
+    imageAlt: "geometric-ornament-1-right",
+    styles: {
+      maxWidth: 95,
+      left: "unset",
+      top: 191,
+      right: 34,
+      bottom: "unset",
+      transform: "rotate(320deg) scaleX(-1)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament1,
+    imageAlt: "geometric-ornament-1-top-left",
+    styles: {
+      left: 205,
+      top: 56,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(34deg)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament1,
+    imageAlt: "geometric-ornament-1-top-right",
+    styles: {
+      left: "unset",
+      top: 56,
+      right: 205,
+      bottom: "unset",
+      transform: "rotate(-37deg) scaleX(-1)",
+    },
+  },
+];
+
+export const SHORT_GEOMETRIC_ORNAMENT_2 = [
+  {
+    imageSrc: GeometricOrnament2,
+    imageAlt: "geometric-ornament-2-left",
+    styles: {
+      maxWidth: 95,
+      left: 38,
+      top: 156,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(49deg)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament2,
+    imageAlt: "geometric-ornament-2-right",
+    styles: {
+      maxWidth: 95,
+      left: "unset",
+      top: 176,
+      right: 38,
+      bottom: "unset",
+      transform: "rotate(317deg) scaleX(-1)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament2,
+    imageAlt: "geometric-ornament-2-top-left",
+    styles: {
+      left: 205,
+      top: 56,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(34deg)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament2,
+    imageAlt: "geometric-ornament-2-top-right",
+    styles: {
+      left: "unset",
+      top: 56,
+      right: 205,
+      bottom: "unset",
+      transform: "rotate(-37deg) scaleX(-1)",
+    },
+  },
+];
+
+export const SHORT_GEOMETRIC_ORNAMENT_3 = [
+  {
+    imageSrc: GeometricOrnament3,
+    imageAlt: "geometric-ornament-3-left",
+    styles: {
+      maxWidth: 95,
+      left: 38,
+      top: 156,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(49deg)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament3,
+    imageAlt: "geometric-ornament-3-right",
+    styles: {
+      maxWidth: 95,
+      left: "unset",
+      top: 176,
+      right: 38,
+      bottom: "unset",
+      transform: "rotate(317deg) scaleX(-1)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament3,
+    imageAlt: "geometric-ornament-3-top-left",
+    styles: {
+      left: 205,
+      top: 56,
+      right: "unset",
+      bottom: "unset",
+      transform: "rotate(34deg)",
+    },
+  },
+  {
+    imageSrc: GeometricOrnament3,
+    imageAlt: "geometric-ornament-3-top-right",
+    styles: {
+      left: "unset",
+      top: 56,
+      right: 205,
+      bottom: "unset",
+      transform: "rotate(-37deg) scaleX(-1)",
+    },
+  },
+];
+
+export const SHORT_ALL_ORNAMENTS = {
+  FLORAL_ORNAMENT_1: SHORT_FLORAL_ORNAMENT_1,
+  FLORAL_ORNAMENT_2: SHORT_FLORAL_ORNAMENT_2,
+  FLORAL_ORNAMENT_3: SHORT_FLORAL_ORNAMENT_3,
+
+  GEOMETRIC_ORNAMENT_1: SHORT_GEOMETRIC_ORNAMENT_1,
+  GEOMETRIC_ORNAMENT_2: SHORT_GEOMETRIC_ORNAMENT_2,
+  GEOMETRIC_ORNAMENT_3: SHORT_GEOMETRIC_ORNAMENT_3,
+};
+
+// ALL ORNAMENTS
 export enum ORNAMENTS_ENUM {
   FLORAL_ORNAMENT_1 = "FLORAL_ORNAMENT_1",
   FLORAL_ORNAMENT_2 = "FLORAL_ORNAMENT_2",
