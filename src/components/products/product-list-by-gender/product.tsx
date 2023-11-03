@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 import { Gender, PRODUCT_LIST_BY_GENDER } from "./constants";
 
@@ -13,7 +14,23 @@ const ProductListByGender = () => {
 
   return (
     <>
+      <Box
+        height={40}
+        width="100%"
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        sx={{ cursor: "pointer" }}
+        onClick={() => navigate(-1)}
+      >
+        <ArrowBackIosNewIcon fontSize="small" color="primary" />
+        <Typography color="primary" fontWeight="bold">
+          Back
+        </Typography>
+      </Box>
+
       <Typography variant="h5">Choose {gender} product</Typography>
+
       <Box>
         {PRODUCT_LIST_BY_GENDER[gender as Gender].map(
           ({ src, alt, name, id }) => (

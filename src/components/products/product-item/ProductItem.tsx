@@ -129,11 +129,12 @@ const ProductItem = () => {
       <Box width="100%" display="flex" justifyContent="space-between">
         <Box
           mr={1}
+          height={40}
           display="flex"
           alignItems="center"
           justifyContent="flex-start"
           sx={{ cursor: "pointer" }}
-          onClick={() => navigate("/")}
+          onClick={() => navigate(-1)}
         >
           <ArrowBackIosNewIcon fontSize="small" color="primary" />
           <Typography color="primary" fontWeight="bold">
