@@ -10,6 +10,7 @@ import {
   TooltipProps,
   tooltipClasses,
   Divider,
+  Button,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -414,6 +415,10 @@ const SettingsColumn = ({
           </>
         )}
       </Card>
+
+      <Button fullWidth variant="contained" sx={{ mt: 2 }}>
+        Order Product
+      </Button>
     </Box>
   );
 };

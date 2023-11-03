@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
-import { Box, IconButton, Tooltip } from "@mui/material";
+import { useNavigate, useParams } from "react-router-dom";
+import { Box, IconButton, Tooltip, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import DownloadIcon from "@mui/icons-material/Download";
 import CallIcon from "@mui/icons-material/Call";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 import SettingsColumn from "../settings-column/SettingsColumn";
 
@@ -31,6 +32,7 @@ import html2canvas from "html2canvas";
 
 const ProductItem = () => {
   const { productId } = useParams();
+  const navigate = useNavigate();
   const printRef = useRef();
 
   const selectedProduct = PRODUCT_LIST.find(({ id }) => id === productId);
@@ -119,18 +121,34 @@ const ProductItem = () => {
 
   return (
     <>
-      <Box width="100%">
-        <Tooltip title="Call Our Manager" sx={{ mr: 1 }}>
-          <IconButton onClick={() => {}} color="primary">
-            <CallIcon />
-          </IconButton>
-        </Tooltip>
+      <Box width="100%" display="flex" justifyContent="space-between">
+        <Box
+          mr={1}
+          display="flex"
+          alignItems="center"
+          justifyContent="flex-start"
+          sx={{ cursor: "pointer" }}
+          onClick={() => navigate("/")}
+        >
+          <ArrowBackIosNewIcon fontSize="small" color="primary" />
+          <Typography color="primary" fontWeight="bold">
+            Back
+          </Typography>
+        </Box>
 
-        <Tooltip title="Download Image">
-          <IconButton onClick={handleDownloadImage} color="primary">
-            <DownloadIcon />
-          </IconButton>
-        </Tooltip>
+        <Box>
+          <Tooltip title="Call Our Manager" sx={{ mr: 1 }}>
+            <IconButton onClick={() => {}} color="primary">
+              <CallIcon />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="Download Image">
+            <IconButton onClick={handleDownloadImage} color="primary">
+              <DownloadIcon />
+            </IconButton>
+          </Tooltip>
+        </Box>
       </Box>
 
       <Box
