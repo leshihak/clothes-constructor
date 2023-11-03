@@ -114,7 +114,7 @@ const ProductItem = () => {
 
     if (typeof link.download === "string") {
       link.href = data;
-      link.download = "image.jpg";
+      link.download = "image";
 
       document.body.appendChild(link);
       link.click();
