@@ -8,8 +8,6 @@ const ProductList = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      position="relative"
-      height="calc(100vh - 80px)"
     >
       <Outlet />
     </Box>

@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
-import { Box } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Box, IconButton, Tooltip } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
+import DownloadIcon from "@mui/icons-material/Download";
+import CallIcon from "@mui/icons-material/Call";
 
 import SettingsColumn from "../settings-column/SettingsColumn";
 
@@ -25,9 +27,11 @@ import {
   SIZE,
   SIZE_PRICE,
 } from "./constants";
+import html2canvas from "html2canvas";
 
 const ProductItem = () => {
   const { productId } = useParams();
+  const printRef = useRef();
 
   const selectedProduct = PRODUCT_LIST.find(({ id }) => id === productId);
 
@@ -94,14 +98,48 @@ const ProductItem = () => {
     setPrice(sumWithInitial);
   }, [fabricType, productSize, ornamentType, selectedProduct?.type]);
 
+  const handleDownloadImage = async () => {
+    const element: HTMLElement | undefined = printRef.current;
+    const canvas = await html2canvas(element!);
+
+    const data = canvas.toDataURL("image/jpg");
+    const link = document.createElement("a");
+
+    if (typeof link.download === "string") {
+      link.href = data;
+      link.download = "image.jpg";
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      window.open(data);
+    }
+  };
+
   return (
     <>
+      <Box width="100%">
+        <Tooltip title="Call Our Manager" sx={{ mr: 1 }}>
+          <IconButton onClick={() => {}} color="primary">
+            <CallIcon />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Download Image">
+          <IconButton onClick={handleDownloadImage} color="primary">
+            <DownloadIcon />
+          </IconButton>
+        </Tooltip>
+      </Box>
+
       <Box
         p={2}
         display="flex"
         alignItems="center"
         justifyContent="center"
         position="relative"
+        ref={printRef}
       >
         <img
           src={selectedImage}

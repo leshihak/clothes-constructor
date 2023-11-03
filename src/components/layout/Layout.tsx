@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <Box p={5} height="calc(100vh - 80px)">
+    <Box p={5}>
       {/* <nav>
         <ul>
           <li>
