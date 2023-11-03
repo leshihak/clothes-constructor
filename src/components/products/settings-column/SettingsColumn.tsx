@@ -48,6 +48,7 @@ interface SettingsColumnProps {
   fabricType: FABRIC_TYPES;
   ornamentType: ORNAMENTS_ENUM | null;
   productSize: SIZE;
+  price: number;
   onSetFabricType: (fabricType: FABRIC_TYPES) => void;
   onSetOrnamentType: (ornamentType: ORNAMENTS_ENUM | null) => void;
   onSetProductSize: (productSize: SIZE) => void;
@@ -58,6 +59,7 @@ const SettingsColumn = ({
   fabricType,
   ornamentType,
   productSize,
+  price,
   onSetFabricType,
   onSetOrnamentType,
   onSetProductSize,
@@ -71,7 +73,7 @@ const SettingsColumn = ({
           {product.name}
         </Typography>
 
-        <Typography color="text.secondary">100 грн.</Typography>
+        <Typography color="text.secondary">{price} грн.</Typography>
       </Card>
 
       <Card sx={{ minWidth: 275, p: 2 }}>

@@ -5,6 +5,7 @@ import FloralOrnament3 from "../../images/floral-ornament/floral-ornament-3.png"
 import GeometricOrnament1 from "../../images/geometric-ornament/geometric-ornament-1.png";
 import GeometricOrnament2 from "../../images/geometric-ornament/geometric-ornament-2.png";
 import GeometricOrnament3 from "../../images/geometric-ornament/geometric-ornament-3.png";
+import { FABRIC_TYPES } from "../settings-column/constants";
 
 // LONG SLEEVES
 // FLORAL ORNAMENTS
@@ -626,3 +627,37 @@ export enum SIZE {
   L = "L",
   CUSTOM = "CUSTOM",
 }
+
+// PRICE
+export const FABRIC_PRICE = {
+  [FABRIC_TYPES.Linen]: 1000,
+  [FABRIC_TYPES.Silk]: 1500,
+  [FABRIC_TYPES.Velvet]: 2000,
+};
+
+export const SIZE_PRICE = {
+  [SIZE.S]: 1000,
+  [SIZE.M]: 1500,
+  [SIZE.L]: 2000,
+  [SIZE.CUSTOM]: 2500,
+};
+
+export const LONG_ORNAMENT_PRICE = {
+  [ORNAMENTS_ENUM.FLORAL_ORNAMENT_1]: 1000,
+  [ORNAMENTS_ENUM.FLORAL_ORNAMENT_2]: 1500,
+  [ORNAMENTS_ENUM.FLORAL_ORNAMENT_3]: 2000,
+
+  [ORNAMENTS_ENUM.GEOMETRIC_ORNAMENT_1]: 1000,
+  [ORNAMENTS_ENUM.GEOMETRIC_ORNAMENT_2]: 1500,
+  [ORNAMENTS_ENUM.GEOMETRIC_ORNAMENT_3]: 2000,
+};
+
+export const SHORT_ORNAMENT_PRICE = {
+  [ORNAMENTS_ENUM.FLORAL_ORNAMENT_1]: 500,
+  [ORNAMENTS_ENUM.FLORAL_ORNAMENT_2]: 1000,
+  [ORNAMENTS_ENUM.FLORAL_ORNAMENT_3]: 1500,
+
+  [ORNAMENTS_ENUM.GEOMETRIC_ORNAMENT_1]: 500,
+  [ORNAMENTS_ENUM.GEOMETRIC_ORNAMENT_2]: 1000,
+  [ORNAMENTS_ENUM.GEOMETRIC_ORNAMENT_3]: 1500,
+};

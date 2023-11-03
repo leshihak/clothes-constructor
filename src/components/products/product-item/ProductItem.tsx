@@ -16,10 +16,14 @@ import TShirtShortSleevesSilk from "../../images/short-sleeves/t-shirt-short-sle
 import TShirtShortSleevesVelvet from "../../images/short-sleeves/t-shirt-short-sleeves-velvet.png";
 
 import {
+  FABRIC_PRICE,
   LONG_ALL_ORNAMENTS,
+  LONG_ORNAMENT_PRICE,
   ORNAMENTS_ENUM,
   SHORT_ALL_ORNAMENTS,
+  SHORT_ORNAMENT_PRICE,
   SIZE,
+  SIZE_PRICE,
 } from "./constants";
 
 const ProductItem = () => {
@@ -27,6 +31,7 @@ const ProductItem = () => {
 
   const selectedProduct = PRODUCT_LIST.find(({ id }) => id === productId);
 
+  const [price, setPrice] = useState(0);
   const [fabricType, setFabricType] = useState(FABRIC_TYPES.Linen);
   const [productSize, setProductSize] = useState(SIZE.S);
   const [ornamentType, setOrnamentType] = useState<ORNAMENTS_ENUM | null>(null);
@@ -67,6 +72,27 @@ const ProductItem = () => {
         break;
     }
   }, [selectedProduct?.type, fabricType]);
+
+  useEffect(() => {
+    const array = [];
+
+    array.push(FABRIC_PRICE[fabricType]);
+    array.push(SIZE_PRICE[productSize]);
+
+    if (selectedProduct?.type === "t-shirt-long-sleeves") {
+      array.push(LONG_ORNAMENT_PRICE[ornamentType!]);
+    }
+
+    if (selectedProduct?.type === "t-shirt-short-sleeves") {
+      array.push(SHORT_ORNAMENT_PRICE[ornamentType!]);
+    }
+
+    const sumWithInitial = array
+      .filter((x) => x)
+      .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    setPrice(sumWithInitial);
+  }, [fabricType, productSize, ornamentType, selectedProduct?.type]);
 
   return (
     <>
@@ -124,6 +150,7 @@ const ProductItem = () => {
         fabricType={fabricType}
         ornamentType={ornamentType}
         productSize={productSize}
+        price={price}
         onSetFabricType={setFabricType}
         onSetOrnamentType={setOrnamentType}
         onSetProductSize={setProductSize}
