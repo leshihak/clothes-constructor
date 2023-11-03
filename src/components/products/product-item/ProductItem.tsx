@@ -19,6 +19,7 @@ import {
   LONG_ALL_ORNAMENTS,
   ORNAMENTS_ENUM,
   SHORT_ALL_ORNAMENTS,
+  SIZE,
 } from "./constants";
 
 const ProductItem = () => {
@@ -27,6 +28,7 @@ const ProductItem = () => {
   const selectedProduct = PRODUCT_LIST.find(({ id }) => id === productId);
 
   const [fabricType, setFabricType] = useState(FABRIC_TYPES.Linen);
+  const [productSize, setProductSize] = useState(SIZE.S);
   const [ornamentType, setOrnamentType] = useState<ORNAMENTS_ENUM | null>(null);
   const [selectedImage, setSelectedImage] = useState(() =>
     selectedProduct?.type === "t-shirt-long-sleeves"
@@ -121,8 +123,10 @@ const ProductItem = () => {
         product={selectedProduct!}
         fabricType={fabricType}
         ornamentType={ornamentType}
+        productSize={productSize}
         onSetFabricType={setFabricType}
         onSetOrnamentType={setOrnamentType}
+        onSetProductSize={setProductSize}
       />
     </>
   );

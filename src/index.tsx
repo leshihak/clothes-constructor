@@ -1,12 +1,16 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import ErrorPage from "./components/error-page/ErrorPage";
 import ProductList from "./components/products/product-list/ProductList";
 import ProductItem from "./components/products/product-item/ProductItem";
 import Layout from "./components/layout/Layout";
-import Home from "./components/home-page/HomePage";
+// import Home from "./components/home-page/HomePage";
 import ProductIndex from "./components/products/product-index/ProductIndex";
 import "./styles.css";
 
@@ -16,7 +20,8 @@ const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Navigate to="/product-list" replace /> },
+      // { index: true, element: <Home /> },
       {
         path: "/product-list",
         element: <ProductList />,

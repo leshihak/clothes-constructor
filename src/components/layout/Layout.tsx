@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <Box p={5} height="calc(100vh - 80px)">
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -18,7 +18,7 @@ const Layout = () => {
         </ul>
       </nav>
 
-      <hr />
+      <hr /> */}
 
       <Outlet />
     </Box>

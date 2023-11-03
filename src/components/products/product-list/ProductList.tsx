@@ -1,18 +1,16 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
 
 const ProductList = () => {
   return (
     <Box
       display="flex"
-      flexDirection="column"
       alignItems="center"
       justifyContent="center"
+      flexDirection="column"
       position="relative"
-      height="93%"
+      height="calc(100vh - 80px)"
     >
-      <Typography variant="h5">Choose product</Typography>
-
       <Outlet />
     </Box>
   );

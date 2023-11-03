@@ -618,3 +618,11 @@ export enum ORNAMENTS_ENUM {
   GEOMETRIC_ORNAMENT_2 = "GEOMETRIC_ORNAMENT_2",
   GEOMETRIC_ORNAMENT_3 = "GEOMETRIC_ORNAMENT_3",
 }
+
+// SIZE
+export enum SIZE {
+  S = "S",
+  M = "M",
+  L = "L",
+  CUSTOM = "CUSTOM",
+}
