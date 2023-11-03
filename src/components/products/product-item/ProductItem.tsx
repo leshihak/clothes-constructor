@@ -9,13 +9,17 @@ import SettingsColumn from "../settings-column/SettingsColumn";
 
 import { FABRIC_TYPES } from "../settings-column/constants";
 
-import TShirtLongSleevesLinen from "../../images/long-sleeves/t-shirt-long-sleeves-linen.png";
-import TShirtLongSleevesSilk from "../../images/long-sleeves/t-shirt-long-sleeves-silk.png";
-import TShirtLongSleevesVelvet from "../../images/long-sleeves/t-shirt-long-sleeves-velvet.png";
+import ManTShirtLongSleevesLinen from "../../images/long-sleeves/man/t-shirt-long-sleeves-linen.png";
+import ManTShirtLongSleevesSilk from "../../images/long-sleeves/man/t-shirt-long-sleeves-silk.png";
+import ManTShirtLongSleevesVelvet from "../../images/long-sleeves/man/t-shirt-long-sleeves-velvet.png";
 
-import TShirtShortSleevesLinen from "../../images/short-sleeves/t-shirt-short-sleeves-linen.png";
-import TShirtShortSleevesSilk from "../../images/short-sleeves/t-shirt-short-sleeves-silk.png";
-import TShirtShortSleevesVelvet from "../../images/short-sleeves/t-shirt-short-sleeves-velvet.png";
+import WomanTShirtLongSleevesLinen from "../../images/long-sleeves/woman/t-shirt-long-sleeves-linen.jpg";
+
+import ManTShirtShortSleevesLinen from "../../images/short-sleeves/man/t-shirt-short-sleeves-linen.png";
+import ManTShirtShortSleevesSilk from "../../images/short-sleeves/man/t-shirt-short-sleeves-silk.png";
+import ManTShirtShortSleevesVelvet from "../../images/short-sleeves/man/t-shirt-short-sleeves-velvet.png";
+
+import WomanTShirtShortSleevesLinen from "../../images/short-sleeves/woman/t-shirt-short-sleeves-linen.jpg";
 
 import {
   FABRIC_PRICE,
@@ -46,43 +50,74 @@ const ProductItem = () => {
   const [fabricType, setFabricType] = useState(FABRIC_TYPES.Linen);
   const [productSize, setProductSize] = useState(SIZE.S);
   const [ornamentType, setOrnamentType] = useState<ORNAMENTS_ENUM | null>(null);
-  const [selectedImage, setSelectedImage] = useState(() =>
-    selectedProduct?.type === "t-shirt-long-sleeves"
-      ? TShirtLongSleevesLinen
-      : TShirtShortSleevesLinen
-  );
+  const [selectedImage, setSelectedImage] = useState("");
 
   useEffect(() => {
-    switch (selectedProduct?.type) {
-      case "t-shirt-long-sleeves":
-        switch (fabricType) {
-          case FABRIC_TYPES.Linen:
-            setSelectedImage(TShirtLongSleevesLinen);
+    switch (gender) {
+      case Gender.man:
+        switch (selectedProduct?.type) {
+          case "t-shirt-long-sleeves":
+            switch (fabricType) {
+              case FABRIC_TYPES.Linen:
+                setSelectedImage(ManTShirtLongSleevesLinen);
+                break;
+              case FABRIC_TYPES.Silk:
+                setSelectedImage(ManTShirtLongSleevesSilk);
+                break;
+              case FABRIC_TYPES.Velvet:
+                setSelectedImage(ManTShirtLongSleevesVelvet);
+                break;
+            }
             break;
-          case FABRIC_TYPES.Silk:
-            setSelectedImage(TShirtLongSleevesSilk);
-            break;
-          case FABRIC_TYPES.Velvet:
-            setSelectedImage(TShirtLongSleevesVelvet);
+
+          case "t-shirt-short-sleeves":
+            switch (fabricType) {
+              case FABRIC_TYPES.Linen:
+                setSelectedImage(ManTShirtShortSleevesLinen);
+                break;
+              case FABRIC_TYPES.Silk:
+                setSelectedImage(ManTShirtShortSleevesSilk);
+                break;
+              case FABRIC_TYPES.Velvet:
+                setSelectedImage(ManTShirtShortSleevesVelvet);
+                break;
+            }
             break;
         }
         break;
+      case Gender.woman:
+        switch (selectedProduct?.type) {
+          case "t-shirt-long-sleeves":
+            switch (fabricType) {
+              case FABRIC_TYPES.Linen:
+                setSelectedImage(WomanTShirtLongSleevesLinen);
+                break;
+              case FABRIC_TYPES.Silk:
+                setSelectedImage(WomanTShirtLongSleevesLinen);
+                break;
+              case FABRIC_TYPES.Velvet:
+                setSelectedImage(WomanTShirtLongSleevesLinen);
+                break;
+            }
+            break;
 
-      case "t-shirt-short-sleeves":
-        switch (fabricType) {
-          case FABRIC_TYPES.Linen:
-            setSelectedImage(TShirtShortSleevesLinen);
-            break;
-          case FABRIC_TYPES.Silk:
-            setSelectedImage(TShirtShortSleevesSilk);
-            break;
-          case FABRIC_TYPES.Velvet:
-            setSelectedImage(TShirtShortSleevesVelvet);
+          case "t-shirt-short-sleeves":
+            switch (fabricType) {
+              case FABRIC_TYPES.Linen:
+                setSelectedImage(WomanTShirtShortSleevesLinen);
+                break;
+              case FABRIC_TYPES.Silk:
+                setSelectedImage(WomanTShirtShortSleevesLinen);
+                break;
+              case FABRIC_TYPES.Velvet:
+                setSelectedImage(WomanTShirtShortSleevesLinen);
+                break;
+            }
             break;
         }
         break;
     }
-  }, [selectedProduct?.type, fabricType]);
+  }, [selectedProduct?.type, gender, fabricType]);
 
   useEffect(() => {
     const array = [];

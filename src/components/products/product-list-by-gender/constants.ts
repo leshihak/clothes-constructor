@@ -1,17 +1,19 @@
-import TShirtLongSleevesLinen from "../../images/long-sleeves/t-shirt-long-sleeves-linen.png";
+import ManTShirtLongSleevesLinen from "../../images/long-sleeves/man/t-shirt-long-sleeves-linen.png";
+import WomanTShirtLongSleevesLinen from "../../images/long-sleeves/woman/t-shirt-long-sleeves-linen.jpg";
 
-import TShirtShortSleevesLinen from "../../images/short-sleeves/t-shirt-short-sleeves-linen.png";
+import ManTShirtShortSleevesLinen from "../../images/short-sleeves/man/t-shirt-short-sleeves-linen.png";
+import WomanTShirtShortSleevesLinen from "../../images/short-sleeves/woman/t-shirt-short-sleeves-linen.jpg";
 
 export const PRODUCT_LIST_FOR_MAN = [
   {
-    src: TShirtLongSleevesLinen,
+    src: ManTShirtLongSleevesLinen,
     alt: "Man T-Shirt Long Sleeves",
     name: "Man T-Shirt Long Sleeves",
     type: "t-shirt-long-sleeves",
     id: "1",
   },
   {
-    src: TShirtShortSleevesLinen,
+    src: ManTShirtShortSleevesLinen,
     alt: "ManT-Shirt Short Sleeves",
     name: "Man T-Shirt Short Sleeves",
     type: "t-shirt-short-sleeves",
@@ -21,17 +23,17 @@ export const PRODUCT_LIST_FOR_MAN = [
 
 export const PRODUCT_LIST_FOR_WOMAN = [
   {
-    src: TShirtShortSleevesLinen,
-    alt: "Woman T-Shirt Short Sleeves",
-    name: "Woman T-Shirt Short Sleeves",
-    type: "t-shirt-short-sleeves",
-    id: "11",
-  },
-  {
-    src: TShirtLongSleevesLinen,
+    src: WomanTShirtLongSleevesLinen,
     alt: "Woman T-Shirt Long Sleeves",
     name: "Woman T-Shirt Long Sleeves",
     type: "t-shirt-long-sleeves",
+    id: "11",
+  },
+  {
+    src: WomanTShirtShortSleevesLinen,
+    alt: "Woman T-Shirt Short Sleeves",
+    name: "Woman T-Shirt Short Sleeves",
+    type: "t-shirt-short-sleeves",
     id: "12",
   },
 ];
