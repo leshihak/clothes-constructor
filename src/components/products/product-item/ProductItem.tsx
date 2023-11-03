@@ -8,7 +8,6 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SettingsColumn from "../settings-column/SettingsColumn";
 
 import { FABRIC_TYPES } from "../settings-column/constants";
-import { PRODUCT_LIST } from "../product-index/constants";
 
 import TShirtLongSleevesLinen from "../../images/long-sleeves/t-shirt-long-sleeves-linen.png";
 import TShirtLongSleevesSilk from "../../images/long-sleeves/t-shirt-long-sleeves-silk.png";
@@ -29,13 +28,19 @@ import {
   SIZE_PRICE,
 } from "./constants";
 import html2canvas from "html2canvas";
+import {
+  Gender,
+  PRODUCT_LIST_BY_GENDER,
+} from "../product-list-by-gender/constants";
 
 const ProductItem = () => {
-  const { productId } = useParams();
+  const { productId, gender } = useParams();
   const navigate = useNavigate();
   const printRef = useRef();
 
-  const selectedProduct = PRODUCT_LIST.find(({ id }) => id === productId);
+  const selectedProduct = PRODUCT_LIST_BY_GENDER[gender as Gender].find(
+    ({ id }) => id === productId
+  );
 
   const [price, setPrice] = useState(0);
   const [fabricType, setFabricType] = useState(FABRIC_TYPES.Linen);

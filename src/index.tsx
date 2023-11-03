@@ -11,8 +11,9 @@ import ProductList from "./components/products/product-list/ProductList";
 import ProductItem from "./components/products/product-item/ProductItem";
 import Layout from "./components/layout/Layout";
 // import Home from "./components/home-page/HomePage";
-import ProductIndex from "./components/products/product-index/ProductIndex";
 import "./styles.css";
+import ChooseGender from "./components/products/choose-gender/ChooseGender";
+import ProductListByGender from "./components/products/product-list-by-gender/product";
 
 const router = createBrowserRouter([
   {
@@ -26,9 +27,13 @@ const router = createBrowserRouter([
         path: "/product-list",
         element: <ProductList />,
         children: [
-          { index: true, element: <ProductIndex /> },
+          { index: true, element: <ChooseGender /> },
           {
-            path: ":productId",
+            path: ":gender",
+            element: <ProductListByGender />,
+          },
+          {
+            path: ":gender/:productId",
             element: <ProductItem />,
           },
         ],
