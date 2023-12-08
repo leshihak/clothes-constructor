@@ -31,7 +31,7 @@ const ProductListByGender = () => {
 
       <Typography variant="h5">Choose {gender} product</Typography>
 
-      <Box display="flex" gap={2}>
+      <Box display="flex" justifyContent="center" flexWrap="wrap" gap={2}>
         {PRODUCT_LIST_BY_GENDER[gender as Gender].map(
           ({ src, alt, name, id }) => (
             <Button

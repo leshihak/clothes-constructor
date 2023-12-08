@@ -13,13 +13,14 @@ import ManTShirtLongSleevesLinen from "../../images/long-sleeves/man/t-shirt-lon
 import ManTShirtLongSleevesSilk from "../../images/long-sleeves/man/t-shirt-long-sleeves-silk.png";
 import ManTShirtLongSleevesVelvet from "../../images/long-sleeves/man/t-shirt-long-sleeves-velvet.png";
 
-import WomanTShirtLongSleevesLinen from "../../images/long-sleeves/woman/t-shirt-long-sleeves-linen.jpg";
-
 import ManTShirtShortSleevesLinen from "../../images/short-sleeves/man/t-shirt-short-sleeves-linen.png";
 import ManTShirtShortSleevesSilk from "../../images/short-sleeves/man/t-shirt-short-sleeves-silk.png";
 import ManTShirtShortSleevesVelvet from "../../images/short-sleeves/man/t-shirt-short-sleeves-velvet.png";
 
 import WomanTShirtShortSleevesLinen from "../../images/short-sleeves/woman/t-shirt-short-sleeves-linen.jpg";
+import WomanTShirtLongSleevesLinen from "../../images/long-sleeves/woman/t-shirt-long-sleeves-linen.jpg";
+import Woman1 from "../../images/woman/1.jpg";
+import Woman3 from "../../images/woman/3.jpg";
 
 import {
   FABRIC_PRICE,
@@ -93,10 +94,10 @@ const ProductItem = () => {
                 setSelectedImage(WomanTShirtLongSleevesLinen);
                 break;
               case FABRIC_TYPES.Silk:
-                setSelectedImage(WomanTShirtLongSleevesLinen);
+                setSelectedImage(Woman1);
                 break;
               case FABRIC_TYPES.Velvet:
-                setSelectedImage(WomanTShirtLongSleevesLinen);
+                setSelectedImage(Woman3);
                 break;
             }
             break;
