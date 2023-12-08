@@ -15,23 +15,39 @@ const ProductListByGender = () => {
   return (
     <>
       <Box
-        height={40}
-        width="100%"
+        height={80}
+        width="95%"
         display="flex"
         alignItems="center"
-        justifyContent="flex-start"
-        sx={{ cursor: "pointer" }}
-        onClick={() => navigate(-1)}
+        justifyContent="space-between"
+        position="fixed"
+        top={0}
+        left={40}
+        zIndex={1}
+        bgcolor="white"
       >
-        <ArrowBackIosNewIcon fontSize="small" color="primary" />
-        <Typography color="primary" fontWeight="bold">
-          Back
-        </Typography>
+        <Box
+          sx={{ cursor: "pointer" }}
+          onClick={() => navigate(-1)}
+          display="flex"
+          alignItems="center"
+        >
+          <ArrowBackIosNewIcon
+            fontSize="small"
+            color="primary"
+            sx={{ mr: 1 }}
+          />
+          <Typography color="primary" fontWeight="bold">
+            Back
+          </Typography>
+        </Box>
+
+        <Typography variant="h5">Choose {gender} product</Typography>
+
+        <Box width={70} />
       </Box>
 
-      <Typography variant="h5">Choose {gender} product</Typography>
-
-      <Box display="flex" justifyContent="center" flexWrap="wrap" gap={2}>
+      <Box display="flex" justifyContent="center" flexWrap="wrap" gap={2} p={5}>
         {PRODUCT_LIST_BY_GENDER[gender as Gender].map(
           ({ src, alt, name, id }) => (
             <Button
